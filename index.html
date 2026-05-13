@@ -1,85 +1,414 @@
+# ملف HTML مطور لاختبار الغيبيات والسمعيات
+
+```html
 <!DOCTYPE html>
-margin-bottom:15px;
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اختبار الغيبيات والسمعيات - النسخة المطورة</title>
+
+<style>
+body{
+    font-family:"Tahoma", sans-serif;
+    background:#edf1f7;
+    margin:0;
+    padding:20px;
+    direction:rtl;
 }
-.sec{
-background:#163b65;
-color:white;
-padding:8px;
-border-radius:8px;
-margin-bottom:12px;
+
+.page{
+    width:210mm;
+    min-height:297mm;
+    background:white;
+    margin:25px auto;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 0 15px rgba(0,0,0,0.15);
+    page-break-after:always;
 }
-.q{
-background:#f8faff;
-border:1px solid #d7dfeb;
-padding:10px;
-border-radius:8px;
-margin-bottom:10px;
-line-height:1.9;
+
+.header{
+    text-align:center;
+    margin-bottom:30px;
 }
-.line{
-border-bottom:2px dashed #777;
-height:20px;
-margin-top:12px;
+
+.header h1{
+    color:#163b65;
+    margin-bottom:10px;
 }
-.area{
-height:80px;
-border:2px dashed #aaa;
-border-radius:8px;
-margin-top:10px;
+
+.header p{
+    color:#555;
+    font-size:18px;
+}
+
+.info-box{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+    gap:20px;
+}
+
+.info-item{
+    flex:1;
+    border:2px solid #d6dce5;
+    padding:10px;
+    border-radius:10px;
+}
+
+.section-title{
+    background:#163b65;
+    color:white;
+    padding:12px;
+    border-radius:10px;
+    margin:25px 0;
+    font-size:22px;
+}
+
+.question{
+    background:#f8f9fc;
+    border:1px solid #d6dce5;
+    border-radius:12px;
+    padding:18px;
+    margin-bottom:18px;
+}
+
+.question h3{
+    margin-top:0;
+    color:#163b65;
+}
+
+.options{
+    margin-top:10px;
+    line-height:2;
+}
+
+.answer-space{
+    border-bottom:2px dashed #777;
+    margin-top:20px;
+    height:30px;
+}
+
+.long-answer{
+    border:2px dashed #aaa;
+    border-radius:10px;
+    margin-top:15px;
+    height:120px;
+}
+
+.answer-box{
+    background:#eef5ff;
+    border-right:5px solid #163b65;
+    padding:15px;
+    margin-bottom:15px;
+    border-radius:10px;
+}
+
+.note{
+    background:#fff7df;
+    border-right:5px solid #f1b400;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.footer{
+    text-align:center;
+    margin-top:30px;
+    color:#777;
+}
+
+@media print{
+    body{
+        background:white;
+    }
+
+    .page{
+        box-shadow:none;
+        margin:0;
+        border-radius:0;
+    }
 }
 </style>
+
 </head>
 <body>
 
+<!-- صفحة الغلاف -->
 <div class="page">
-<div class="title"><h1>اختبار الغيبيات والسمعيات</h1></div>
-<div class="sec">اختيار من متعدد</div>
-<div class="q">1- الغيب هو:
-<br>أ) ما يشاهد بالحواس
-<br>ب) ما غاب عن الحس
-<br>ج) ما يراه الإنسان
-<br>د) ما يسمع فقط
+
+<div class="header">
+<h1>اختبار الغيبيات والسمعيات</h1>
+<p>مادة التوحيد والعقيدة</p>
 </div>
-<div class="q">2- السمعيات تؤخذ من:
-<br>أ) العقل
-<br>ب) الوحي
-<br>ج) التجربة
-<br>د) الفلسفة
+
+<div class="note">
+<b>تعليمات الاختبار:</b><br>
+- اقرأ جميع الأسئلة جيداً قبل الإجابة.<br>
+- أجب عن جميع الأقسام المطلوبة.<br>
+- الزمن المقترح: ساعتان.
 </div>
-<div class="q">3- عالم الملك هو:
-<br>أ) عالم الشهادة
-<br>ب) عالم البرزخ
-<br>ج) عالم الغيب
-<br>د) الجنة
+
+<div class="info-box">
+<div class="info-item">اسم الطالب: __________________</div>
+<div class="info-item">الشعبة: __________________</div>
+</div>
+
+<div class="info-box">
+<div class="info-item">التاريخ: __________________</div>
+<div class="info-item">الدرجة: __________________</div>
+</div>
+
+<div class="footer">
+نسخة مطورة ومنظمة للاختبار ✨
+</div>
+
+</div>
+
+<!-- الصفحة الأولى -->
+<div class="page">
+
+<div class="section-title">
+القسم الأول: اختر الإجابة الصحيحة
+</div>
+
+<div class="question">
+<h3>1- ما تعريف الغيب اصطلاحاً؟</h3>
+<div class="options">
+أ) كل ما يراه الإنسان بالحواس<br>
+ب) ما غاب عن الحس والعقل<br>
+ج) الأمور الدنيوية فقط<br>
+د) الأمور المتعلقة بالطبيعة فقط
 </div>
 </div>
 
-<div class="page">
-<div class="sec">صح أو غلط</div>
-<div class="q">4- الإيمان بالغيب من صفات المؤمنين. ( )</div>
-<div class="q">5- الملائكة يعصون الله. ( )</div>
-<div class="q">6- الملائكة مخلوقون من نور. ( )</div>
-<div class="q">7- الغيب نوع واحد فقط. ( )</div>
+<div class="question">
+<h3>2- ما المصدر الأول لمعرفة الغيبيات؟</h3>
+<div class="options">
+أ) التجارب العلمية<br>
+ب) العقل فقط<br>
+ج) القرآن الكريم والسنة<br>
+د) آراء الناس
+</div>
 </div>
 
-<div class="page">
-<div class="sec">أكمل الفراغ</div>
-<div class="q">8- الركن الثاني من أركان الإيمان هو الإيمان بـ ________
-<div class="line"></div></div>
-<div class="q">9- يسمى عالم الغيب بعالم ________
-<div class="line"></div></div>
-<div class="q">10- الموكل بالنفخ في الصور هو ________
-<div class="line"></div></div>
+<div class="question">
+<h3>3- السمعيات هي:</h3>
+<div class="options">
+أ) أمور تؤخذ من الحواس<br>
+ب) مسائل لا تعرف إلا بالخبر الصادق<br>
+ج) علوم فيزيائية<br>
+د) اجتهادات بشرية
+</div>
 </div>
 
-<div class="page">
-<div class="sec">أسئلة مقالية</div>
-<div class="q">11- اذكر أنواع الغيب.
-<div class="area"></div></div>
-<div class="q">12- تكلم عن صفات الملائكة.
-<div class="area"></div></div>
+<div class="question">
+<h3>4- عالم الشهادة يسمى أيضاً:</h3>
+<div class="options">
+أ) عالم الملكوت<br>
+ب) عالم الغيب<br>
+ج) عالم الملك<br>
+د) عالم البرزخ
+</div>
 </div>
 
+<div class="question">
+<h3>5- الركن الثاني من أركان الإيمان هو:</h3>
+<div class="options">
+أ) الإيمان بالرسل<br>
+ب) الإيمان بالملائكة<br>
+ج) الإيمان باليوم الآخر<br>
+د) الإيمان بالقدر
+</div>
+</div>
+
+<div class="question">
+<h3>6- خُلقت الملائكة من:</h3>
+<div class="options">
+أ) طين<br>
+ب) نار<br>
+ج) نور<br>
+د) ماء
+</div>
+</div>
+
+</div>
+
+<!-- الصفحة الثانية -->
 <div class="page">
-<div class="sec">اختيار من متعدد</div>
+
+<div class="section-title">
+القسم الثاني: صح أو غلط
+</div>
+
+<div class="question"><h3>7- الغيب نوع واحد فقط. (     )</h3></div>
+<div class="question"><h3>8- من طرق معرفة الغيب السنة النبوية. (     )</h3></div>
+<div class="question"><h3>9- الإيمان بالغيب يوسع رؤية المسلم للوجود. (     )</h3></div>
+<div class="question"><h3>10- الملائكة مخلوقون من نار. (     )</h3></div>
+<div class="question"><h3>11- الملائكة يعصون الله أحياناً. (     )</h3></div>
+<div class="question"><h3>12- من أعمال الملائكة كتابة أعمال الإنسان. (     )</h3></div>
+<div class="question"><h3>13- الملكوت هو عالم الغيب. (     )</h3></div>
+<div class="question"><h3>14- من صفات الملائكة أنهم لا يأكلون ولا يشربون. (     )</h3></div>
+<div class="question"><h3>15- السمعيات تؤخذ من الوحي. (     )</h3></div>
+<div class="question"><h3>16- العقل ينكر كل ما لا يراه. (     )</h3></div>
+
+</div>
+
+<!-- الصفحة الثالثة -->
+<div class="page">
+
+<div class="section-title">
+القسم الثالث: أكمل الفراغ
+</div>
+
+<div class="question">
+<h3>17- الملائكة خُلقوا من ____________.</h3>
+<div class="answer-space"></div>
+</div>
+
+<div class="question">
+<h3>18- يسمى العالم الذي يدرك بالحواس بعالم ____________.</h3>
+<div class="answer-space"></div>
+</div>
+
+<div class="question">
+<h3>19- من أعمال الملائكة مع البشر ____________.</h3>
+<div class="answer-space"></div>
+</div>
+
+<div class="question">
+<h3>20- الركن الثاني من أركان الإيمان هو الإيمان بـ ____________.</h3>
+<div class="answer-space"></div>
+</div>
+
+<div class="question">
+<h3>21- من طرق معرفة الغيب ____________ و ____________.</h3>
+<div class="answer-space"></div>
+</div>
+
+<div class="question">
+<h3>22- عالم الغيب يسمى أيضاً عالم ____________.</h3>
+<div class="answer-space"></div>
+</div>
+
+<div class="question">
+<h3>23- من آثار الإيمان بالغيب زيادة ____________ بالله.</h3>
+<div class="answer-space"></div>
+</div>
+
+</div>
+
+<!-- الصفحة الرابعة -->
+<div class="page">
+
+<div class="section-title">
+القسم الرابع: علل
+</div>
+
+<div class="question">
+<h3>24- علل: سميت السمعيات بهذا الاسم.</h3>
+<div class="long-answer"></div>
+</div>
+
+<div class="question">
+<h3>25- علل: الإيمان بالغيب يزيد طمأنينة المسلم.</h3>
+<div class="long-answer"></div>
+</div>
+
+<div class="question">
+<h3>26- علل: كان الإيمان بالملائكة الركن الثاني من أركان الإيمان.</h3>
+<div class="long-answer"></div>
+</div>
+
+</div>
+
+<!-- الصفحة الخامسة -->
+<div class="page">
+
+<div class="section-title">
+القسم الخامس: أسئلة مقالية
+</div>
+
+<div class="question">
+<h3>27- اذكر أقسام الغيب باختصار.</h3>
+<div class="long-answer"></div>
+</div>
+
+<div class="question">
+<h3>28- وضح الفرق بين الغيبيات والسمعيات.</h3>
+<div class="long-answer"></div>
+</div>
+
+<div class="question">
+<h3>29- اذكر ثلاثة من صفات الملائكة.</h3>
+<div class="long-answer"></div>
+</div>
+
+<div class="question">
+<h3>30- وضح أثر الإيمان بالغيب على حياة المسلم.</h3>
+<div class="long-answer"></div>
+</div>
+
+</div>
+
+<!-- الصفحة السادسة -->
+<div class="page">
+
+<div class="section-title">
+القسم السادس: قارن بين
+</div>
+
+<div class="question">
+<h3>31- قارن بين عالم الغيب وعالم الشهادة.</h3>
+<div class="long-answer"></div>
+</div>
+
+<div class="question">
+<h3>32- قارن بين الغيبيات والسمعيات.</h3>
+<div class="long-answer"></div>
+</div>
+
+<div class="question">
+<h3>33- قارن بين صفات الملائكة وصفات البشر.</h3>
+<div class="long-answer"></div>
+</div>
+
+</div>
+
+<!-- صفحة الإجابات -->
+<div class="page">
+
+<div class="header">
+<h1>نموذج الإجابة</h1>
+</div>
+
+<div class="answer-box">1- ب) ما غاب عن الحس والعقل</div>
+<div class="answer-box">2- ج) القرآن الكريم والسنة</div>
+<div class="answer-box">3- ب) مسائل لا تعرف إلا بالخبر الصادق</div>
+<div class="answer-box">4- ج) عالم الملك</div>
+<div class="answer-box">5- ب) الإيمان بالملائكة</div>
+<div class="answer-box">6- ج) نور</div>
+<div class="answer-box">7- غلط</div>
+<div class="answer-box">8- صح</div>
+<div class="answer-box">9- صح</div>
+<div class="answer-box">10- غلط</div>
+<div class="answer-box">11- غلط</div>
+<div class="answer-box">12- صح</div>
+<div class="answer-box">13- صح</div>
+<div class="answer-box">14- صح</div>
+<div class="answer-box">15- صح</div>
+<div class="answer-box">16- غلط</div>
+<div class="answer-box">17- نور</div>
+<div class="answer-box">18- الشهادة أو الملك</div>
+<div class="answer-box">19- كتابة الأعمال أو قبض الأرواح</div>
+<div class="answer-box">20- الملائكة</div>
+<div class="answer-box">21- القرآن الكريم والسنة النبوية</div>
+<div class="answer-box">22- الملكوت</div>
+<div class="answer-box">23- الثقة أو الطمأنينة</div>
+
+</div>
+
+</body>
 </html>
+```
